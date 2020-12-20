@@ -1,0 +1,26 @@
+{
+  "name": "CodingMaths",
+  "version": "1.0.0",
+  "description": "maths experiments",
+  "main": "app.js",
+  "scripts": {
+    "dev": "parcel src/ep_02/index.html",
+    "format": "prettier --ignore-path ./.gitignore --write \"./**/*.{html,json,js,ts,css}\"",
+    "format:check": "prettier --ignore-path ./.gitignore --check \"./**/*.{html,json,js,ts,css}\"",
+    "lint": "eslint --ignore-path ./.gitignore --fix \"./**/*.{js,ts}\"",
+    "lint:check": "eslint --ignore-path ./.gitignore --quiet \"./**/*.{js,ts}\""
+  },
+  "keywords": [],
+  "author": "depps",
+  "license": "ISC",
+  "browserslist": [
+    "last 2 Firefox versions"
+  ],
+  "devDependencies": {
+    "eslint": "^7.16.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.2.1"
+  }
+}
