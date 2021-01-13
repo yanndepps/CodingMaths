@@ -4,13 +4,16 @@ window.onload = function () {
     width = (canvas.width = window.innerWidth),
     height = (canvas.height = window.innerHeight);
 
-  context.fillRect(0, 0, width, height);
-  context.strokeStyle = "#f2f2f2";
+  // shift the canvas down
+  context.translate(0, height / 2);
+  // flip our axis
+  context.scale(1, -1);
 
-  for (let i = 0; i < 100; i++) {
-    context.beginPath();
-    context.moveTo(Math.random() * width, Math.random() * height);
-    context.lineTo(Math.random() * width, Math.random() * height);
-    context.stroke();
+  for (let angle = 0; angle < Math.PI * 2; angle += 0.01) {
+    // console.log(Math.sin(angle));
+    let x = angle * 200,
+      y = Math.sin(angle) * 200;
+
+    context.fillRect(x, y, 5, 5);
   }
 };
